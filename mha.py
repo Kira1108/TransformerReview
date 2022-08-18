@@ -1,3 +1,9 @@
+"""Very Important mask notes:
+Mask is only used in attention weights, masked positions will not be pay attention to.
+If positions gain no attention, they have very limited effects to the final output.
+"""
+
+
 import tensorflow as tf
 
 def scaled_dot_product(q,k,v, mask):

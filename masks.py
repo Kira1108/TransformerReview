@@ -1,4 +1,3 @@
-from venv import create
 import tensorflow as tf
 
 def create_padding_mask(x):

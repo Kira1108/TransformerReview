@@ -1,7 +1,7 @@
 import tensorflow as tf
-from encoder import Encoder
-from decoder import Decoder
-from masks import create_padding_mask, create_look_ahead_mask
+from .encoder import Encoder
+from .decoder import Decoder
+from .masks import create_padding_mask, create_look_ahead_mask
 
 class Transformer(tf.keras.models.Model):
 

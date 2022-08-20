@@ -1,6 +1,6 @@
 import tensorflow as tf
-from feed_forward import point_wise_feed_forward_network
-from mha import MultiHeadAttention
+from .feed_forward import point_wise_feed_forward_network
+from .mha import MultiHeadAttention
 
 
 class EncoderLayer(tf.keras.layers.Layer):

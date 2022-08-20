@@ -30,7 +30,7 @@ def positional_encoding(position, d_model):
     )
 
     angles[:,0::2] = np.sin(angles[:,0::2])
-    angles[:,1::2] = np.sin(angles[:,1::2])
+    angles[:,1::2] = np.cos(angles[:,1::2])
 
     pos_encoding = angles[np.newaxis, ...]
 

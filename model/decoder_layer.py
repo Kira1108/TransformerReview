@@ -24,7 +24,7 @@ class DecoderLayer(tf.keras.layers.Layer):
         self.feed_forward = point_wise_feed_forward_network(self.d_model, dff)
 
 
-    def call(self, x, enc_out, training, padding_mask, look_ahead_mask):
+    def call(self, x, enc_out, training, look_ahead_mask, padding_mask):
 
         out1, attn1 = self.mha1(x, x, x, look_ahead_mask)
         out1 = self.dropout1(out1, training = training)

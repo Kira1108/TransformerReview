@@ -1,6 +1,9 @@
 # Transformer
 
-Transformer对我有啥用：
+使用下面的笔记本来训练这个Transformer：
+https://colab.research.google.com/drive/1jEfCu010BPWrepNl0nH2Hj10hQ8Ml3zH?usp=sharing
+
+## Transformer对我有啥用：
 
 1. 以dot product 去做self attention的时候， 利用了vector similarty的思想，把similary matrix当作weight
 做成了一个attention matrix, T * T）,similary matrix其实也不只在transformer才用到的，邻接矩阵也是一个N*N的矩阵，任意两个节点的结构相似性，也能表示成，相似性矩阵，然后用来做节点聚类，节点特征啥的， 卧槽， 这个可以做Node self attention, 妈的，我咋这么牛逼呢。

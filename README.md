@@ -1,6 +1,6 @@
 # Transformer
 
-作为一个科学家，你应该使用下面的笔记本来训练这个Transformer：    
+作为一个科学家，你应该使用下面的笔记本来训练这个Transformer(google colab TPU, 模型持久化在谷歌硬盘)：    
 https://colab.research.google.com/drive/1jEfCu010BPWrepNl0nH2Hj10hQ8Ml3zH?usp=sharing    
 训练好了把笔记本模型save到模型服务器上面去， 这个笔记本就是 notebooks/TransformerTraining.ipynb    
 

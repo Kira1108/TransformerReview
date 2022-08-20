@@ -2,7 +2,9 @@
 
 作为一个科学家，你应该使用下面的笔记本来训练这个Transformer：
 https://colab.research.google.com/drive/1jEfCu010BPWrepNl0nH2Hj10hQ8Ml3zH?usp=sharing
-训练好了把笔记本模型save到模型服务器上面去
+训练好了把笔记本模型save到模型服务器上面去， 这个笔记本就是 notebooks/TransformerTraining.ipynb
+
+除此之外还要好好研究一下数据， 数据的笔记本在 notebooks/data.ipynb
 
 ## Transformer对我有啥用：
 

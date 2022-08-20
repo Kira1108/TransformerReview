@@ -1,7 +1,8 @@
 # Transformer
 
-使用下面的笔记本来训练这个Transformer：
+作为一个科学家，你应该使用下面的笔记本来训练这个Transformer：
 https://colab.research.google.com/drive/1jEfCu010BPWrepNl0nH2Hj10hQ8Ml3zH?usp=sharing
+训练好了把笔记本模型save到模型服务器上面去
 
 ## Transformer对我有啥用：
 
@@ -12,11 +13,11 @@ https://colab.research.google.com/drive/1jEfCu010BPWrepNl0nH2Hj10hQ8Ml3zH?usp=sh
 
 3. 对于input来说，我可以随便折腾，所以在encoder layer的时候，从理解的角度来说，可以完全忽略padding mask，然后可以简化成一个简单结构 multihead attention + feed forward net, 这两个东西为了防止过拟合，都加入了dropout，然后添加了一个skip connection的layernorm， 这个结构可以在其他的地方复用。 
 
-  [功能层] + [Dropout] + [Layernorm Skip connect]      
-+ [功能层] + [Dropout] + [Layernorm Skip connect]   
-+ [功能层] + [Dropout] + [Layernorm Skip connect]   
-+ [功能层] + [Dropout] + [Layernorm Skip connect]   
-+ Dense 变变形状输出
+   [功能层] + [Dropout] + [Layernorm Skip connect]        
+\+ [功能层] + [Dropout] + [Layernorm Skip connect]     
+\+ [功能层] + [Dropout] + [Layernorm Skip connect]     
+\+ [功能层] + [Dropout] + [Layernorm Skip connect]     
+\+ Dense 变变形状输出
 
 
 4. 看到和看不到：对于encoder layer来说，看padding是没有意义的，对于decoder来说， 看decoder input的padding是没有用的，看encoder 的padding位也是没有用的。 且在decoder预测某个step的时候，不能看到这个step后面的东西。 这些都被mask优雅的处理了，所以整个东西输入的时候，都是NTD的东西来来去去。
